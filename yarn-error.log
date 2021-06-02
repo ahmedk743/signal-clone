@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\ideal\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @react-navigation/native
+  C:\Program Files\nodejs\node.exe C:\Users\ideal\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-navigation/native
 
 PATH: 
-  C:\Users\ideal\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\cmd;C:\Users\ideal\AppData\Roaming\npm\node_modules\yarn\bin;C:\Users\ideal\App Data\Roaming\npm\node_modules\expo-cli\bin;C:\Users\ideal\AppData\Roaming\npm\no de_modules\nodemon\bin;C:\Users\ideal\AppData\Roaming\npm;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\Sy stem32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\dotnet\ ;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCo mmon;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\ideal\AppData\L ocal\Android\Sdk\emulator;C:\Users\ideal\AppData\Roaming\npm\node_modules\yarn\bin;C:\Users\ideal\App Data\Roaming\npm\node_modules\expo-cli\bin;C:\Users\ideal\AppData\Roaming\npm\no de_modules\nodemon\bin;C:\Users\ideal\AppData\Roaming\npm\node_modules\expo\bin;C:\Users\ideal\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\ideal\AppData\Local\Android\Sdk\emulator;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\ideal\AppData\Roaming\npm\node_modules\yarn\bin;C:\Users\ideal\App Data\Roaming\npm\node_modules\expo-cli\bin;C:\Users\ideal\AppData\Roaming\npm\no de_modules\nodemon\bin;C:\Users\ideal\AppData\Roaming\npm;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\Sy stem32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\ ;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCo mmon\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\ideal\AppData\L ocal\Android\Sdk\emulator;C:\Users\ideal\AppData\Roaming\npm\node_modules\yarn\bin;C:\Users\ideal\App Data\Roaming\npm\node_modules\expo-cli\bin;C:\Users\ideal\AppData\Roaming\npm\no de_modules\nodemon\bin;C:\Users\ideal\AppData\Roaming\npm\node_modules\expo\bin;C:\Users\ideal\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\ideal\AppData\Local\Android\Sdk\emulator
 
 Yarn version: 
   1.22.10
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\ReactNative\signal-clone\node_modules\@babel\generator\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'D:\ReactNative\signal-clone\node_modules\@react-navigation\core\src'
 
 npm manifest: 
   {
