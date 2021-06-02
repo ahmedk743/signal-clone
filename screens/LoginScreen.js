@@ -1,20 +1,32 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, KeyboardAvoidingView } from "react-native";
 import { Button, Input, Image } from "react-native-elements";
 import { StatusBar } from "expo-status-bar";
+import { auth } from "../firebase";
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  //   const signIn = () => {};
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        navigation.replace("Home");
+      }
+    });
+    return unsubscribe;
+  }, []);
+
+  const signIn = () => {
+    return;
+  };
 
   return (
-    <View>
+    <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <StatusBar style="light" />
       <Image
         source={{
-          url: "https://blog.mozilla.org/internetcitizen/files/2018/08/signal-logo.png",
+          uri: "https://blog.mozilla.org/internetcitizen/files/2018/08/signal-logo.png",
         }}
         style={{ width: 200, height: 200 }}
       />
@@ -33,22 +45,39 @@ const LoginScreen = () => {
           value={password}
           onChangeText={(text) => setPassword(text)}
         />
-        <Button containerStyle={styles.button} title="Login" />
-        <Button
-          containerStyle={styles.button}
-          type="outline"
-          title="Register"
-        />
       </View>
-    </View>
+      <Button
+        raised
+        containerStyle={styles.button}
+        onPress={signIn}
+        title="Login"
+      />
+      <Button
+        containerStyle={styles.button}
+        onPress={() => navigation.navigate("Register")}
+        type="outline"
+        title="Register"
+      />
+      <View style={{ height: 100 }} />
+    </KeyboardAvoidingView>
   );
 };
 
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-  inputContainer: {},
+  inputContainer: {
+    width: 300,
+  },
+  container: {
+    alignItems: "center",
+    flex: 1,
+    justifyContent: "center",
+    padding: 10,
+    backgroundColor: "white",
+  },
   button: {
-    margin: "5px",
+    width: 200,
+    marginTop: 10,
   },
 });
