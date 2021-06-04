@@ -13,10 +13,11 @@ const RegisterScreen = ({ navigation }) => {
 
   const register = () => {
     auth.createUserWithEmailAndPassword(email, password).then((authUser) => {
-      authUser.user.update({
+      authUser.user.updateProfile({
         displayName: name,
-        photoURL: imageUrl || 
-            http://cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png,
+        photoURL:
+          imageUrl ||
+          "http://cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png",
       });
     });
   };
