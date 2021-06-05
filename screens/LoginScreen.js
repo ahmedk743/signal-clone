@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, KeyboardAvoidingView } from "react-native";
 import { Button, Input, Image } from "react-native-elements";
 import { StatusBar } from "expo-status-bar";
@@ -11,7 +11,7 @@ const LoginScreen = ({ navigation }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        navigation.replace("Home");
+        navigation.replace("HomeScreen");
       }
     });
     return unsubscribe;
@@ -56,6 +56,7 @@ const LoginScreen = ({ navigation }) => {
         title="Login"
       />
       <Button
+        disabled={!input}
         containerStyle={styles.button}
         onPress={() => navigation.navigate("Register")}
         type="outline"

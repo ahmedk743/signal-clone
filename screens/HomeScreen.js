@@ -9,8 +9,10 @@ import {
 import { ScrollView } from "react-native-gesture-handler";
 import { db, auth } from "../firebase";
 import { AntDesign, SimpleLineIcons } from "@expo/vector-icons";
+import { Avatar } from "react-native-elements";
+import CustomListItem from "../components/CustomListItem";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const [chats, setChats] = useState([]);
 
   useEffect(() => {
@@ -58,13 +60,13 @@ const HomeScreen = () => {
             marginRight: 20,
           }}
         >
+          <TouchableOpacity activeOpacity={0.5}>
+            <AntDesign name="camerao" size={24} color="black" />
+          </TouchableOpacity>
           <TouchableOpacity
             onPress={() => navigation.navigate("AddChat")}
             activeOpacity={0.5}
           >
-            <AntDesign name="camera-outline" size={24} color="black" />
-          </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.5}>
             <SimpleLineIcons name="pencil" size={24} color="black" />
           </TouchableOpacity>
         </View>

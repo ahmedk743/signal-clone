@@ -11,7 +11,7 @@ const RegisterScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
-  const register = () => {
+  const register = ({ navigation }) => {
     auth.createUserWithEmailAndPassword(email, password).then((authUser) => {
       authUser.user.updateProfile({
         displayName: name,
@@ -20,6 +20,7 @@ const RegisterScreen = ({ navigation }) => {
           "http://cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png",
       });
     });
+    // navigation.replace("HomeScreen");
   };
 
   useLayoutEffect(() => {
@@ -31,7 +32,7 @@ const RegisterScreen = ({ navigation }) => {
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <StatusBar style="light" />
-      <Text h3 style={{ marginBottom: 50 }}>
+      <Text h3 style={{ alignItems: "center", marginBottom: 50 }}>
         Apna Signal Account Banayien!
       </Text>
       <View style={styles.inputContainer}>
@@ -66,6 +67,7 @@ const RegisterScreen = ({ navigation }) => {
         />
       </View>
       <Button
+        disabled={!input}
         containerStyle={styles.button}
         onPress={register}
         title="Register"
